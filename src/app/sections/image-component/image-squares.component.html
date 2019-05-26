@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-4" *ngFor="let img of imgArr; index as i">
+    <app-anim-cont [scrollPosition]="scrollPosition"
+                   [initValue]="0" [minValue]="0" [maxValue]="1"
+                   [scrollThreshold]="((i)*scrollGap) - 250" [scrollDistance]="scrollDuration">
+      <div class="img-square-container">
+        <app-anim-cont *ngIf="i === 0 || i === 5 || i === 6" [scrollPosition]="scrollPosition"
+                       [initValue]="0" [minValue]="0" [maxValue]="1"
+                       [scrollThreshold]="(badgeMap[i].threshold + 11)*scrollGap" [scrollDistance]="badgeScrollDuration" class="badge badge-{{i + 1}}">
+<!-- 11 means 9 images plus 2 gaps for space in animation to start badges.-->
+          <img [src]="badgeMap[i].img" alt="">
+        </app-anim-cont>
+        <img class="img-square" src="https://picsum.photos/300/300?{{i}}" alt="">
+      </div>
+    </app-anim-cont>
+  </div>
+</div>

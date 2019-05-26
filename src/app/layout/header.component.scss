@@ -1,0 +1,53 @@
+/deep/ ngx-headroom {
+  .headroom {
+    z-index: 10 !important;
+  }
+}
+header {
+  height: 70px;
+  background-color: #222123;
+  z-index: 10;
+  line-height: 26px;
+  font-size: 13px;
+  padding: 22px 0;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  .logo {
+    float: left;
+
+  }
+  .menu-list {
+    float: right;
+    margin: 0 40px;
+    .menu-item {
+      padding: 0 30px;
+      display: inline-block;
+      //color: #fff;
+
+      white-space: nowrap;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  .login-menu {
+    float: right;
+    .login, .signup {
+      border: 2px solid transparent;
+      border-radius: 10px;
+      //line-height: 70px;
+      white-space: nowrap;
+      //color: #fff;
+      display: inline-block;
+      padding: 0 15px;
+      margin: 0 10px;
+      color: #fff;
+    }
+    .login {}
+    .signup {
+      border: 1px solid #fff;
+    }
+  }
+}

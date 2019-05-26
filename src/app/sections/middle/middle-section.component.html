@@ -1,0 +1,41 @@
+<div class="section-container">
+<!-- takes 2 container size, one for entrance, one for scroll up (become absolute)-->
+  <div class="container-placeholder container">
+  </div>
+  <div class="container-placeholder container">
+  </div>
+<!--  -->
+  <div class="fixed-container" [class.show]="_scrollPosition.sectionDistance > - (windowHeight / 3 * 2)" [class.after]="_scrollPosition.topDistance > (windowHeight * 2)">
+    <app-anim-cont [scrollPosition]="scrollPosition"
+                   [propertyType]="'transform'"
+                   animationType="translateY"
+                   [initValue]="windowHeight" [minValue]="windowHeight" [maxValue]="0" valueEnding="px"
+                   [scrollThreshold]="-(windowHeight / 3 * 2)" [scrollDistance]="(windowHeight / 3 * 2)">
+    <div class="container-placeholder container-fluid no-padding">
+      <div class="row">
+        <div class="col-12 col-sm-6 align-self-center">
+          <app-image-section [scrollPosition]="scrollPosition"></app-image-section>
+        </div>
+        <div class="col-12 col-sm-6 align-self-center">
+          <div class="text-box">
+              <app-anim-cont [scrollPosition]="scrollPosition"
+                             propertyType="opacity"
+                             [initValue]="0" [minValue]="0" [maxValue]="1"
+                             [scrollThreshold]="-(windowHeight / 4)" [scrollDistance]="70">
+                  <h1>GuruShots Makes Your Shots More Meaningful</h1>
+                  <p>Get massive exposure for your photos and meaningful
+                    recognition from a global community of people like you.
+                    Best of the best, players can go from virtual to real world
+                    recognition by being featured in magazines and
+                    newspapers - and even in international photo exhibitions!
+                   </p>
+                <a href="#" class="join-link"> Join Now, it's free <i class="arrow"></i></a>
+              </app-anim-cont>
+          </div>
+        </div>
+      </div>
+    </div>
+
+            </app-anim-cont>
+  </div>
+</div>

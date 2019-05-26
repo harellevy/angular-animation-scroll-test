@@ -1,0 +1,43 @@
+<div class="container-placeholder container-fluid no-padding">
+  <div class="row">
+    <app-anim-cont class="img-col col-12 col-sm-6 order-sm-1" [scrollPosition]="scrollPosition"
+                   [initValue]="1" [minValue]="1" [maxValue]="1.05"
+                   [scrollThreshold]="-100" [scrollDistance]="100"
+    >
+      <img [src]="sectionImage" class="section-img" alt="">
+    </app-anim-cont>
+<!--    <div class="img-col col-12 col-sm-6 order-sm-1" [style.backgroundImage]="sectionImage">-->
+<!--    </div>-->
+    <div class="col-12 col-sm-6 order-sm-0 align-self-center text-center">
+      <app-anim-cont [scrollPosition]="scrollPosition"
+                     [propertyType]="'transform'"
+                     animationType="translateY"
+                     [initValue]="70" [minValue]="70" [maxValue]="0" valueEnding="px"
+                     [scrollThreshold]="-(windowHeight / 3 * 2)" [scrollDistance]="(windowHeight / 3 * 2)">
+      <div class="text-box d-inline-block text-left">
+        <app-anim-cont [scrollPosition]="scrollPosition"
+                       propertyType="opacity"
+                       [initValue]="0" [minValue]="0" [maxValue]="1"
+                       [scrollThreshold]="-(windowHeight / 3)" [scrollDistance]="70">
+          <h1>
+            Get your photos
+            exhibited in
+            galleries around
+            the world
+          </h1>
+          <p>
+            From New York and London to Cape Town, Singapore and
+            beyond. About 5,000 GuruShots players are recognized
+            each month, with tens of thousands already exhibited.
+            Now, you have the opportunity to get recognized, and
+            connect with like-minded friends.
+          </p>
+          <a href="#" class="join-link">
+            Join Now, it's free <i class="arrow"></i>
+          </a>
+        </app-anim-cont>
+      </div>
+      </app-anim-cont>
+    </div>
+  </div>
+</div>
