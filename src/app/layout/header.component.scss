@@ -13,8 +13,15 @@ header {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
+  .header-width {
+    max-width: 1260px;
+    margin: 0 auto;
+  }
   .logo {
     float: left;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 
   }
   .menu-list {
@@ -42,8 +49,9 @@ header {
       //color: #fff;
       display: inline-block;
       padding: 0 15px;
-      margin: 0 10px;
+      margin: 0 0 0 20px;
       color: #fff;
+      text-decoration: none;
     }
     .login {}
     .signup {
