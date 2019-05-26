@@ -2,7 +2,7 @@
   <div class="col-4" *ngFor="let img of imgArr; index as i">
     <app-anim-cont [scrollPosition]="scrollPosition"
                    [initValue]="0" [minValue]="0" [maxValue]="1"
-                   [scrollThreshold]="((i)*scrollGap) - 250" [scrollDistance]="scrollDuration">
+                   [scrollThreshold]="((i)*scrollGap) - 350" [scrollDistance]="scrollDuration">
       <div class="img-square-container">
         <app-anim-cont *ngIf="i === 0 || i === 5 || i === 6" [scrollPosition]="scrollPosition"
                        [initValue]="0" [minValue]="0" [maxValue]="1"

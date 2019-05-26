@@ -9,7 +9,7 @@ import { IScrollObj } from '../../animation-controller/animation-controller.type
 export class ImageSquaresComponent {
   @Input() scrollPosition: IScrollObj;
   scrollGap: number = 30;
-  scrollDuration: number = 200;
+  scrollDuration: number = 280;
   badgeScrollDuration: number = 50;
   imgArr = new Array(9);
   // badge map - index in array to threshold and img map
